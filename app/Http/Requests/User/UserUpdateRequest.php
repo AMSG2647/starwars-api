@@ -26,8 +26,8 @@ class UserUpdateRequest extends FormRequest
     {
         $id = $this->route('user');
         return [
-            'email'=>"email|".Rule::unique('users')->ignore($id),
-            'name'=>'max:100',
+            'email' => "email|" . Rule::unique('users')->ignore($id),
+            'name' => 'max:100',
         ];
     }
 

@@ -24,12 +24,12 @@ class StarshipRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name"=>'required',
-            'model'=>'required',
-            "manufacturer"=>'required',
-            "cost_in_credits"=>'required',
-            "length"=>'required',
-            "max_atmosphering_speed"=>'required',
+            "name" => 'required',
+            'model' => 'required',
+            "manufacturer" => 'required',
+            "cost_in_credits" => 'required',
+            "length" => 'required',
+            "max_atmosphering_speed" => 'required',
         ];
     }
 

@@ -14,22 +14,22 @@ class JwtMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        try{
+        try {
             JWTAuth::parseToken()->authenticate();
-        }catch (\Exception $e){
-            if($e instanceof  TokenInvalidException){
-                return response()->json(['message' => 'invalid token' ], 401);
+        } catch (\Exception $e) {
+            if ($e instanceof TokenInvalidException) {
+                return response()->json(['message' => 'invalid token'], 401);
             }
 
-            if($e instanceof  TokenExpiredException){
-                return response()->json(['message' => 'expired token' ], 401);
+            if ($e instanceof TokenExpiredException) {
+                return response()->json(['message' => 'expired token'], 401);
             }
 
-            return response()->json(['message' => 'token not found' ], 401);
+            return response()->json(['message' => 'token not found'], 401);
         }
         return $next($request);
     }
