@@ -52,7 +52,10 @@
 - Implementar una manera mas eficaz la informacion traida de la API para registrar en la Base de datos.
     
 ## Observaciones  
-               
+
+- En las migraciones los vehiculos son colocados de manera aleatorias en las naves espaciales, 
+puede variar si se migra en varios lados la base de datos, unas naves puede que no tengan vehiculos.           
+    
 - Se hubiera implementado solo el uso de la API sin registros pero queria hacerlo de la segunda forma 
 para que se visualizara el CRUD creado y el registro de informacion en la base de datos mediante los seeders
 usando HTTP.
