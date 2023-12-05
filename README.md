@@ -9,6 +9,7 @@
 
 ## Intrucciones de Instalacion
 
+- Tener Instalado PHP 8.1
 - Empezamos clonando el repositorio: ``` git clone https://github.com/AMSG2647/starwars-api.git```
 - Abrimos la consola ubicada dentro del proyecto (importante tener instalado [composer](https://getcomposer.org/download/)).
 - Agregar .env que enviare por correo.
