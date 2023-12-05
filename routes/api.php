@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 /* Routes Auth*/
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('jwtUser')->group(function (){
+Route::middleware('jwtUser')->group(function () {
     /* Routes Users*/
     Route::apiResource('/users', UserController::class);
     Route::apiResource('/starships', StarshipController::class);
