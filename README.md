@@ -14,7 +14,8 @@
 - Agregar .env que enviare por correo.
 - Ejecutamos: ```composer install```
 - Se instalo Laravel Sail esto permite crear el container en [Docker](https://www.docker.com/)) para que el proyecto se virtualice, es importante ejecutar Docker para que el siguiente comando funcione.
-- Este comando permite crear el container en docker y que se ejecute el proyecto: ```sudo vendor/bin/sail up -d ```
+- Ejecutar en consola: ```alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'```
+- Este comando permite crear el container en docker y que se ejecute el proyecto: ```sudo sail up -d ```
 - **Importante:** En windows puede generar el error de Command not found si no se tiene instalada la consola de UBUNTU, en mi caso en MAC me genero un error de permisos.
 - Error command not found: [Solucion Windows](https://www.hostgator.mx/blog/terminal-linux-windows-10/)
 - Error permisos MAC en repositorios de Docker: 
