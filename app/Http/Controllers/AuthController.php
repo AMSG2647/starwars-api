@@ -52,7 +52,8 @@ class AuthController extends Controller
                     [
                         'data' => null,
                         'message' => 'invalid credentials'
-                    ], 400);
+                    ],
+                    400);
             }
 
         } catch (JWTException $e) {
@@ -61,7 +62,8 @@ class AuthController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
 
         return response()->json(compact('token'));

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Vehicle\VehicleRequest;
 use App\Models\Vehicle;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -48,14 +47,16 @@ class VehiclesController extends Controller
                     'count' => $vehicleCount,
                     'data' => $vehicle,
                     'message' => 'Query Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('index vehicle fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -139,7 +140,8 @@ class VehiclesController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -172,14 +174,16 @@ class VehiclesController extends Controller
                 [
                     'data' => $vehicle,
                     'message' => 'Successful Found Vehicle'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('show vehicle fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -260,7 +264,8 @@ class VehiclesController extends Controller
                 [
                     'data' => $vehicle,
                     'message' => 'Updated Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('update vehicle fail:' . $e->getMessage());
             DB::rollBack();
@@ -268,7 +273,8 @@ class VehiclesController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -304,7 +310,8 @@ class VehiclesController extends Controller
                 [
                     'data' => $vehicle,
                     'message' => 'Destroy Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             DB::rollBack();
             Log::debug('destroy vehicle fail:' . $e->getMessage());
@@ -312,7 +319,8 @@ class VehiclesController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 }

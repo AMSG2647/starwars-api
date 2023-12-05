@@ -35,7 +35,7 @@ class UserController extends Controller
      *     path="/users",
      *     tags={"Users"},
      *     summary="Query all users",
-     *     operationId="index",
+     *     operationId="indexUser",
      *     security={{"bearerAuth":{}}},
      *   @OA\Response(response="200", description="returns the registered users"),
      *   @OA\Response(response="422", description="validation error"),
@@ -51,14 +51,16 @@ class UserController extends Controller
                 [
                     'data' => $user,
                     'message' => 'Query Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('index user fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -71,7 +73,7 @@ class UserController extends Controller
      *     path="/users",
      *     tags={"Users"},
      *     summary="register users",
-     *     operationId="store",
+     *     operationId="storeUser",
      *     security={{"bearerAuth":{}}},
      *     @OA\RequestBody(
      *     @OA\MediaType(
@@ -124,7 +126,8 @@ class UserController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -137,7 +140,7 @@ class UserController extends Controller
      *     path="/users/{id}",
      *     tags={"Users"},
      *     summary="Return a query",
-     *     operationId="show",
+     *     operationId="showUser",
      *     security={{"bearerAuth":{}}},
      *   @OA\Parameter(
      *     name="id",
@@ -158,14 +161,16 @@ class UserController extends Controller
                 [
                     'data' => $user,
                     'message' => 'Successful Found User'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('show users fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -178,7 +183,7 @@ class UserController extends Controller
      *     path="/users/{id}",
      *     tags={"Users"},
      *     summary="Update a data",
-     *     operationId="update",
+     *     operationId="updateUser",
      *     security={{"bearerAuth":{}}},
      *     @OA\Parameter(
      *     name="id",
@@ -226,7 +231,8 @@ class UserController extends Controller
                 [
                     'data' => $user,
                     'message' => 'Updated Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('update users fail:' . $e->getMessage());
             DB::rollBack();
@@ -234,7 +240,8 @@ class UserController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -247,7 +254,7 @@ class UserController extends Controller
      *     path="/users/{id}",
      *     tags={"Users"},
      *     summary="Delete to data",
-     *     operationId="destroy",
+     *     operationId="destroyUser",
      *     security={{"bearerAuth":{}}},
      *   @OA\Parameter(
      *     name="id",
@@ -271,7 +278,8 @@ class UserController extends Controller
                 [
                     'data' => $user,
                     'message' => 'Destroy Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             DB::rollBack();
             Log::debug('destroy user fail:' . $e->getMessage());
@@ -279,7 +287,8 @@ class UserController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 }

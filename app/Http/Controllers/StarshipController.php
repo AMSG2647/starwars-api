@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Starship\StarshipRequest;
 use App\Models\Starship;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -50,14 +49,16 @@ class StarshipController extends Controller
                     'count' => $starshipCount,
                     'data' => $starship,
                     'message' => 'Query Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('index starship fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -138,7 +139,8 @@ class StarshipController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ]
+                , 500);
         }
     }
 
@@ -158,7 +160,7 @@ class StarshipController extends Controller
      *     in="path",
      *     required=true,
      *  ),
-     *   @OA\Response(response="200", description="returns a vehicle query"),
+     *   @OA\Response(response="200", description="returns a starship query"),
      *   @OA\Response(response="422", description="validation error"),
      *   @OA\Response(response="500", description="internal error"),
      * )
@@ -171,14 +173,16 @@ class StarshipController extends Controller
                 [
                     'data' => $starship,
                     'message' => 'Successful Found Starship'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('show starship fail:' . $e->getMessage());
             return response()->json(
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -250,7 +254,8 @@ class StarshipController extends Controller
                 [
                     'data' => $starship,
                     'message' => 'Updated Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             Log::debug('update starship fail:' . $e->getMessage());
             DB::rollBack();
@@ -258,7 +263,8 @@ class StarshipController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 
@@ -294,7 +300,8 @@ class StarshipController extends Controller
                 [
                     'data' => $starship,
                     'message' => 'Destroy Completed Successfully'
-                ]);
+                ]
+            );
         } catch (\Exception $e) {
             DB::rollBack();
             Log::debug('destroy starship fail:' . $e->getMessage());
@@ -302,7 +309,8 @@ class StarshipController extends Controller
                 [
                     'data' => null,
                     'message' => $e->getMessage()
-                ], 500);
+                ],
+                500);
         }
     }
 }
