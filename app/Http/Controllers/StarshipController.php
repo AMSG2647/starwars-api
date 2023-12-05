@@ -43,8 +43,11 @@ class StarshipController extends Controller
     {
         try {
             $starship = $this->starship->with('vehicles')->get();
+            $starshipCount = $starship->count();
+
             return response()->json(
                 [
+                    'count' => $starshipCount,
                     'data' => $starship,
                     'message' => 'Query Completed Successfully'
                 ]);

@@ -24,17 +24,9 @@ Route::middleware('jwtUser')->group(function (){
     /* Routes Users*/
     Route::apiResource('/users', UserController::class);
     Route::apiResource('/starships', StarshipController::class);
+    Route::apiResource('/vehicles', VehiclesController::class);
 });
 
-
-Route::apiResource('/vehicles', VehiclesController::class);
-
-
-
-
-//Route::group(['prefix' =>'users'],function () {
-//    //Route::get('/login', [UserController::class, 'login']);
-//});
 
 
 

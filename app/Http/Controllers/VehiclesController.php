@@ -42,8 +42,10 @@ class VehiclesController extends Controller
     {
         try {
             $vehicle = $this->vehicle->with('starships')->get();
+            $vehicleCount = $vehicle->count();
             return response()->json(
                 [
+                    'count' => $vehicleCount,
                     'data' => $vehicle,
                     'message' => 'Query Completed Successfully'
                 ]);
