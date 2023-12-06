@@ -250,7 +250,7 @@ class StarshipController extends Controller
      * @OA\Put (
      *     path="/starships/{id}",
      *     tags={"Starship"},
-     *     summary="updated starship, only place 6 fields but 18 can be updated, this is just an example",
+     *     summary="updated starship",
      *     operationId="updateStarship",
      *     security={{"bearerAuth":{}}},
      *     @OA\Parameter(
@@ -286,13 +286,73 @@ class StarshipController extends Controller
      *                     property="max_atmosphering_speed",
      *                     type="string"
      *                 ),
+     *                  @OA\Property(
+     *                     property="crew",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="passengers",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="cargo_capacity",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="consumables",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="hyperdrive_rating",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="mglt",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="starship_class",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="pilots",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="films",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="url",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="created",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="edited",
+     *                     type="string"
+     *                 ),
      *                 example={
      *                      "name": "Jedi Angel based",
      *                      "model": "Republic Assault ship",
      *                      "manufacturer": "Rendili StarDrive",
      *                      "cost_in_credits": "125000000",
      *                      "length": "1088",
-     *                      "max_atmosphering_speed": 1050
+     *                      "max_atmosphering_speed": 1050,
+     *                      "crew": "1",
+     *                      "passengers": "200",
+     *                      "cargo_capacity": "1000",
+     *                      "consumables": "2 days",
+     *                      "hyperdrive_rating": "3.0",
+     *                      "mglt": "10",
+     *                      "starship_class": "1000000",
+     *                      "pilots": "[]",
+     *                      "films": "[]",
+     *                      "url": null,
+     *                      "created": "2023-12-04 21:30:21",
+     *                      "edited": "2023-12-04 21:30:21"
      *                  }
      *             )
      *         ),

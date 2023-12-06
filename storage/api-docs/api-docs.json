@@ -229,7 +229,7 @@
                 "tags": [
                     "Starship"
                 ],
-                "summary": "updated starship, only place 6 fields but 18 can be updated, this is just an example",
+                "summary": "updated starship",
                 "operationId": "updateStarship",
                 "parameters": [
                     {
@@ -260,6 +260,42 @@
                                     },
                                     "max_atmosphering_speed": {
                                         "type": "string"
+                                    },
+                                    "crew": {
+                                        "type": "string"
+                                    },
+                                    "passengers": {
+                                        "type": "string"
+                                    },
+                                    "cargo_capacity": {
+                                        "type": "string"
+                                    },
+                                    "consumables": {
+                                        "type": "string"
+                                    },
+                                    "hyperdrive_rating": {
+                                        "type": "string"
+                                    },
+                                    "mglt": {
+                                        "type": "string"
+                                    },
+                                    "starship_class": {
+                                        "type": "string"
+                                    },
+                                    "pilots": {
+                                        "type": "string"
+                                    },
+                                    "films": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "created": {
+                                        "type": "string"
+                                    },
+                                    "edited": {
+                                        "type": "string"
                                     }
                                 },
                                 "type": "object",
@@ -269,7 +305,19 @@
                                     "manufacturer": "Rendili StarDrive",
                                     "cost_in_credits": "125000000",
                                     "length": "1088",
-                                    "max_atmosphering_speed": 1050
+                                    "max_atmosphering_speed": 1050,
+                                    "crew": "1",
+                                    "passengers": "200",
+                                    "cargo_capacity": "1000",
+                                    "consumables": "2 days",
+                                    "hyperdrive_rating": "3.0",
+                                    "mglt": "10",
+                                    "starship_class": "1000000",
+                                    "pilots": "[]",
+                                    "films": "[]",
+                                    "url": null,
+                                    "created": "2023-12-04 21:30:21",
+                                    "edited": "2023-12-04 21:30:21"
                                 }
                             }
                         }
@@ -691,7 +739,7 @@
                 "tags": [
                     "Vehicles"
                 ],
-                "summary": "update vehicle, only place 6 fields but 16 can be update, this is just an example",
+                "summary": "update vehicle",
                 "operationId": "updateVehicle",
                 "parameters": [
                     {
@@ -723,6 +771,36 @@
                                     "max_atmosphering_speed": {
                                         "type": "string"
                                     },
+                                    "crew": {
+                                        "type": "string"
+                                    },
+                                    "passengers": {
+                                        "type": "string"
+                                    },
+                                    "cargo_capacity": {
+                                        "type": "string"
+                                    },
+                                    "consumables": {
+                                        "type": "string"
+                                    },
+                                    "vehicle_class": {
+                                        "type": "string"
+                                    },
+                                    "pilots": {
+                                        "type": "string"
+                                    },
+                                    "films": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "created": {
+                                        "type": "string"
+                                    },
+                                    "edited": {
+                                        "type": "string"
+                                    },
                                     "starship_id": {
                                         "type": "integer"
                                     }
@@ -735,6 +813,16 @@
                                     "cost_in_credits": "75000",
                                     "length": "7",
                                     "max_atmosphering_speed": 1500,
+                                    "crew": "1",
+                                    "passengers": "100",
+                                    "cargo_capacity": "1000",
+                                    "consumables": "5 days",
+                                    "vehicle_class": "1.0",
+                                    "pilots": "[]",
+                                    "films": "[]",
+                                    "url": null,
+                                    "created": "2023-12-04 21:30:21",
+                                    "edited": "2023-12-04 21:30:21",
                                     "starship_id": 5
                                 }
                             }

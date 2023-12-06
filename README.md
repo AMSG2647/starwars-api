@@ -50,8 +50,13 @@
 - Crear un Frontend con React para que tuviera interfaz grafica con los CRUD creado de la API.
 
 - Implementar una manera mas eficaz la informacion traida de la API para registrar en la Base de datos.
+
+- Realizar las pruebas unitarias, empece haciendolas pero es bastante extenso.
     
 ## Observaciones  
+
+- Los JSON en la documentacion se puede modificar quitar campos poner otros valores para comprobar la respuesta de la API 
+y como se comporta.  
 
 - En las migraciones los vehiculos son colocados de manera aleatorias en las naves espaciales, 
 puede variar si se migra en varios lados la base de datos, unas naves puede que no tengan vehiculos.           
@@ -60,8 +65,5 @@ puede variar si se migra en varios lados la base de datos, unas naves puede que 
 para que se visualizara el CRUD creado y el registro de informacion en la base de datos mediante los seeders
 usando HTTP.
 
-- Las pruebas unitarias no se completaron.
+## Consultenme cualquier inconveniente con la instalacion o que algo no vaya :) gracias.
                                 
-## License
-
-Angels

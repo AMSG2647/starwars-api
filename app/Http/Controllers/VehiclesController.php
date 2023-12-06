@@ -245,7 +245,7 @@ class VehiclesController extends Controller
      * @OA\Put (
      *     path="/vehicles/{id}",
      *     tags={"Vehicles"},
-     *     summary="update vehicle, only place 6 fields but 16 can be update, this is just an example",
+     *     summary="update vehicle",
      *     operationId="updateVehicle",
      *     security={{"bearerAuth":{}}},
      *     @OA\Parameter(
@@ -282,6 +282,46 @@ class VehiclesController extends Controller
      *                     type="string"
      *                 ),
      *                  @OA\Property(
+     *                     property="crew",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="passengers",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="cargo_capacity",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="consumables",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="vehicle_class",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="pilots",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="films",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="url",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="created",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="edited",
+     *                     type="string"
+     *                 ),
+     *                  @OA\Property(
      *                     property="starship_id",
      *                     type="integer"
      *                 ),
@@ -292,6 +332,16 @@ class VehiclesController extends Controller
      *                      "cost_in_credits": "75000",
      *                      "length": "7",
      *                      "max_atmosphering_speed": 1500,
+     *                      "crew": "1",
+     *                      "passengers": "100",
+     *                      "cargo_capacity": "1000",
+     *                      "consumables": "5 days",
+     *                      "vehicle_class": "1.0",
+     *                      "pilots": "[]",
+     *                      "films": "[]",
+     *                      "url": null,
+     *                      "created": "2023-12-04 21:30:21",
+     *                      "edited": "2023-12-04 21:30:21" ,
      *                      "starship_id": 5
      *                  }
      *             )
