@@ -30,6 +30,17 @@ class StarshipRequest extends FormRequest
             "cost_in_credits" => 'required',
             "length" => 'required',
             "max_atmosphering_speed" => 'required',
+            "crew" => 'required',
+            "passengers" => 'required',
+            "cargo_capacity" => 'required',
+            "consumables" => 'required',
+            "hyperdrive_rating" => 'required',
+            "mglt" => 'required',
+            "starship_class" => 'required',
+            "pilots" => 'required',
+            "films" => 'required',
+            "created" => 'required',
+            "edited" => 'required',
         ];
     }
 

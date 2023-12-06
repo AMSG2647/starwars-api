@@ -30,6 +30,15 @@ class VehicleRequest extends FormRequest
             "cost_in_credits"=>'required',
             "length"=>'required',
             "max_atmosphering_speed"=>'required',
+            "crew"=>'required',
+            "passengers"=>'required',
+            "cargo_capacity"=>'required',
+            "consumables"=>'required',
+            "vehicle_class"=>'required',
+            "pilots"=>'required',
+            "films"=>'required',
+            "created"=>'required',
+            "edited"=>'required',
             "starship_id"=>'required',
         ];
     }
