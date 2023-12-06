@@ -65,5 +65,5 @@ puede variar si se migra en varios lados la base de datos, unas naves puede que 
 para que se visualizara el CRUD creado y el registro de informacion en la base de datos mediante los seeders
 usando HTTP.
 
-## Consultenme cualquier inconveniente con la instalacion o que algo no vaya :) gracias.
+## Consultenme cualquier inconveniente con la instalacion o que algo no vaya :).
                                 
