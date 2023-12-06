@@ -60,10 +60,6 @@ puede variar si se migra en varios lados la base de datos, unas naves puede que 
 para que se visualizara el CRUD creado y el registro de informacion en la base de datos mediante los seeders
 usando HTTP.
 
-- El login le falta mucho por completarse solo se le agrego la parte del token a la API como un plus.
-
-- Falto crear la funcion de generar Token al usuario por cuestion de tiempo no se realizo, el token se genera directamente en el Seeder.
-
 - Las pruebas unitarias no se completaron.
                                 
 ## License
