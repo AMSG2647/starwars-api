@@ -43,6 +43,15 @@ si todo sale bien apareceran unos errores al principio pero se ejecutara el cont
   
   - En el collapsible Auth presionarlo se ve el metodo login ejecutarlo con los datos que se muestran en los parametros y genera un token.
   - Luego copiar ese token y en la parte de arriba aparece un boton Authorize se copia en el value y se presiona en login, ahora si se pueden usar los metodos de la API :).
+ 
+ - Solucion a laravel sail: ```composer update``` y modificar el .env con la conexion de base de datos asi: ```DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=starwars
+    DB_USERNAME=root
+    DB_PASSWORD=```   
+    
+  - Ejecutar ```php artisan serve```      
            
 ## Cosas que fuera agregado por tiempo no se lograron
 

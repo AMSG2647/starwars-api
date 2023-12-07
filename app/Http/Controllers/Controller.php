@@ -11,8 +11,8 @@ use Illuminate\Routing\Controller as BaseController;
  *    title="API Starwars",
  *    version="1.0.0",
  * )
- *  @OA\Server(url="http://localhost/api")
  *  @OA\Server(url="http://127.0.0.1:8000/api")
+ *  @OA\Server(url="http://localhost/api")
  *  @OA\SecurityScheme(
  *      securityScheme="bearerAuth",
  *      in="header",
